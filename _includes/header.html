@@ -1,0 +1,56 @@
+<!--[if lt IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="site-wrap">
+  <header class="site-header">
+    <a class="site-title" href="{{ site.baseurl }}/">
+      <h1>{{ site.title }}</h1>
+    </a>
+    <p class="site-description">{{ site.description }}</p>
+  </header>
+  <nav>
+    <div class="nav-menu"><span class="nav-menu-icon">{% include icons/menu.html %}</span>Menu</div>
+    <div class="ul-flex">
+      <ul class="max-wrap">
+        <li>
+          <a href="{{ site.baseurl }}/" class="{% if page.type == 'landing' and page.url == '/' %}active-page{% endif %}">
+            <span class="nav-icon">{% include icons/home.html %}</span>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ site.baseurl }}/portfolio/" class="{% if page.type == 'landing' and page.url == '/portfolio/' %}{% assign test = true %}{% endif %}{% if page.category == 'web-digital' or page.category == 'email-marketing' or page.category == 'print-layout' %}{% assign test = true %}{% endif %}{% if test %}active-page{% endif %}">
+            <span class="nav-icon">{% include icons/portfolio.html %}</span>
+            Portfolio
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ site.baseurl }}/resume/" class="{% if page.type == 'landing' and page.url == '/resume/' %}active-page{% endif %}">
+            <span class="nav-icon">{% include icons/resume.html %}</span>
+            Resume
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ site.baseurl }}/contact/" class="{% if page.type == 'landing' and page.url == '/contact/' %}active-page{% endif %}">
+            <span class="nav-icon">{% include icons/contact.html %}</span>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- <nav class="nav-collapse">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav> -->
+
+<body>

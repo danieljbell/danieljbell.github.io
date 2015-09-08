@@ -1,0 +1,24 @@
+footer {
+  background: $dark;
+  background: linear-gradient($dark, $darken-dark);
+  color: lighten($dark, 30%);
+}
+
+.site-footer {
+  padding: 2.5em 1em;
+  h2 {
+    text-shadow: $big-shadow;
+    padding-bottom: .25em;
+  }
+}
+
+.social-list-footer {
+  p {
+    display: inline-block;
+  }
+  .contact-icon svg {
+    path, polygon {
+      fill: lighten($dark, 30%);
+    }
+  }
+}

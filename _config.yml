@@ -1,0 +1,17 @@
+# Site settings
+title: Daniel Bell
+email: djbell70@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Print, Web, Interactive<br>Design + Development
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://danieljbell.github.io" # the base hostname & protocol for your site
+twitter_username: DeveloperDB
+github_username:  danieljbell
+codepen_username:  djbell
+
+# Build settings
+markdown: kramdown
+sass:
+  style: :compressed
+exclude: ['Gruntfile.js', 'package.json', 'node_modules']
+permalink: pretty

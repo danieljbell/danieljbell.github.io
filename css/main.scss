@@ -1,0 +1,50 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+$dark: #444;
+$darken-dark: darken($dark, 20%);
+$lighten-dark: lighten($dark, 5%);
+$lgray: #f0f0f0;
+$primary: #59aae9;
+$darken-primary: darken($primary, 20%);
+$shadow: 1px 1px 2px rgba(0,0,0,0.45);
+$big-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+$project-shadow: 0 0 2em rgba(0,0,0,1);
+
+
+// Breakpoints for responsive goodness
+@mixin bp($point) {
+  @if $point == laptop {
+    @media (max-width: 1280px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == phone {
+    @media (max-width: 480px)  { @content; }
+  }
+}
+
+
+// Create a flexible row of items
+@mixin row-a-nator($numPerRow, $margin) {
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $margin + 2;
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "reset",
+        "base",
+        "responsive-nav",
+        "header",
+        "page",
+        "footer";

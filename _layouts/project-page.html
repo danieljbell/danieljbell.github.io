@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page max-wrap">
+      <div class="hero">
+        <img src="{{ site.baseurl }}/img/{{ page.img }}.png" alt="">
+      </div>
+      <div class="page-columns">
+        <div class="primary">
+          <h6>{{ page.title }}</h6>
+          {{ content }}
+        </div>
+        <div class="sidebar sidebar-nav">
+          <h5><a href="{{ site.baseurl }}/portfolio/#web-digital" class="body-link">Web/Digital:</a></h5>
+          <div class="list portfolio-nav social-list portfolio-list">
+            {% for page in site.pages %}
+              {% if page.category == 'web-digital' %}
+                <p><a href="{{ page.url }}" class="body-link">{{ page.title }}</a></p>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <h5><a href="{{ site.baseurl }}/portfolio/#email-marketing" class="body-link">Email Marketing:</a></h5>
+          <div class="list portfolio-nav social-list portfolio-list">
+            {% for page in site.pages %}
+              {% if page.category == 'email-marketing' %}
+                <p><a href="{{ page.url }}" class="body-link">{{ page.title }}</a></p>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <h5><a href="{{ site.baseurl }}/portfolio/#print-layout" class="body-link">Print Layout:</a></h5>
+          <div class="list portfolio-nav social-list portfolio-list">
+            {% for page in site.pages %}
+              {% if page.category == 'print-layout' %}
+                <p><a href="{{ page.url }}" class="body-link">{{ page.title }}</a></p>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

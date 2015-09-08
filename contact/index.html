@@ -1,0 +1,32 @@
+---
+layout: default
+title: Contact
+type: landing
+---
+
+<div class="page-columns page max-wrap">
+    <div class="primary">
+      <!-- <h2>Get In Touch</h2> -->
+      <p class="section">Send Me An Email</p>
+      <form class="contact-form" method="POST" action="////formspree.io/team@formspree.io">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name">
+          <input type="email" name="_replyto" placeholder="Your email">
+        </div>
+        <textarea name="message" rows="5" placeholder="Your message" id="message"></textarea>
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit">Send</button>
+      </form>
+  </div>
+    <div>
+      <!-- <h2>&nbsp;</h2> -->
+      <p class="section">Get In Touch</p>
+      <div class="social-list">
+        <p><a href="mailto:djbell70@gmail.com" target="_blank" class="body-link"><span class="contact-icon">{% include icons/email.html %}</span>djbell70@gmail.com</a></p>
+        <p><a href="http://www.twitter.com/{{ site.twitter_username }}" target="_blank" class="body-link"><span class="contact-icon">{% include icons/twitter.html %}</span>@DeveloperDB</a></p>
+        <p><a href="https://www.linkedin.com/in/danieljamesbell" target="_blank" class="body-link"><span class="contact-icon">{% include icons/linkedin.html %}</span>LinkedIn</a></p>
+        <p><a href="http://www.github.com/{{ site.github_username }}" target="_blank" class="body-link"><span class="contact-icon">{% include icons/github.html %}</span>danieljbell</a></p>
+        <p><a href="http://www.codepen.com/{{ site.codepen_username }}" target="_blank" class="body-link"><span class="contact-icon">{% include icons/codepen.html %}</span>djbell</a></p>
+      </div>
+    </div>
+</div>

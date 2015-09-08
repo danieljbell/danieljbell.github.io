@@ -1,0 +1,41 @@
+<footer>
+
+  <div class="max-wrap site-footer">
+
+    <p class="align-right">Made with pride using Jekyll, Sass + Grunt</p>
+
+    <h2>Get In Touch</h2>
+    <div class="social-list-footer social-list">
+      <p><a href="mailto:djbell70@gmail.com" target="_blank" class="body-link"><span class="contact-icon">{% include icons/email.html %}</span></a></p>
+      <p><a href="http://www.twitter.com/{{ site.twitter_username }}" target="_blank" class="body-link"><span class="contact-icon">{% include icons/twitter.html %}</span></a></p>
+      <p><a href="https://www.linkedin.com/in/danieljamesbell" target="_blank" class="body-link"><span class="contact-icon">{% include icons/linkedin.html %}</span></a></p>
+      <p><a href="http://www.github.com/{{ site.github_username }}" target="_blank" class="body-link"><span class="contact-icon">{% include icons/github.html %}</span></a></p>
+      <p><a href="http://www.codepen.com/{{ site.codepen_username }}" target="_blank" class="body-link"><span class="contact-icon">{% include icons/codepen.html %}</span></a></p>
+    </div>
+
+  </div>
+
+</footer>
+
+</div>
+
+<script src="{{ site.baseurl }}/js/jquery.js"></script>
+<script src="{{ site.baseurl }}/js/responsive-nav.min.js"></script>
+<script>var nav = responsiveNav(".nav-collapse");</script>
+<script src="{{ site.baseurl }}/js/functions.js"></script>
+
+{% if page.url == '/contact/index.html' %}
+  <script type="text/javascript">
+  (function() {
+    var textarea = document.getElementById("message");
+    var limit = 200;
+
+    textarea.oninput = function() {
+      textarea.style.height = "";
+      textarea.style.height = Math.min(textarea.scrollHeight, 300) + "px";
+    };
+  })();
+  </script>
+{% endif %}
+</body>
+</html>
