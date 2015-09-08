@@ -35,7 +35,7 @@
         </li>
 
         <li>
-          <a href="{{ site.baseurl }}/contact/" class="{% if page.type == 'landing' and page.url == '/contact/' %}active-page{% endif %}">
+          <a href="{{ site.baseurl }}/contact/" class="{% if page.type == 'landing' and page.url contains 'contact' %}active-page{% endif %}">
             <span class="nav-icon">{% include icons/contact.html %}</span>
             Contact
           </a>
