@@ -6,7 +6,6 @@ type: landing
 
 <div class="page-columns page max-wrap">
     <div class="primary">
-      <!-- <h2>Get In Touch</h2> -->
       <p class="section">Send Me An Email</p>
       <form class="contact-form" method="POST" action="////formspree.io/djbell70@gmail.com">
         <div class="form-row">
@@ -14,13 +13,12 @@ type: landing
           <input type="email" name="_replyto" placeholder="Your email">
         </div>
         <textarea name="message" rows="5" placeholder="Your message" id="message"></textarea>
-        <input type="hidden" name="_next" value="{{ site.baseurl }}/contact/thanks.html" />
+        <input type="hidden" name="_next" value="{{ site.baseurl }}/contact/thanks/" />
         <input type="text" name="_gotcha" style="display:none">
         <button type="submit">Send</button>
       </form>
   </div>
     <div>
-      <!-- <h2>&nbsp;</h2> -->
       <p class="section">Get In Touch</p>
       <div class="social-list">
         <p><a href="mailto:djbell70@gmail.com" class="body-link"><span class="contact-icon">{% include icons/email.html %}</span>djbell70@gmail.com</a></p>
