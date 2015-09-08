@@ -44,7 +44,19 @@ $project-shadow: 0 0 2em rgba(0,0,0,1);
 @import
         "reset",
         "base",
-        "responsive-nav",
         "header",
         "page",
         "footer";
+
+
+
+// IE Overides
+.ie img[src*=".svg"] {
+  width: 100%;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {
+    width: 100%;
+  }
+}
