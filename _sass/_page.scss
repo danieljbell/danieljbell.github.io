@@ -38,6 +38,13 @@
   }
 }
 
+.about-me p {
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 // PORTFOLIO PAGE
 .portfolio-item {
