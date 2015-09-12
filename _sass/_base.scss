@@ -55,6 +55,7 @@ img {
   svg {
     width: 100%;
     max-width: 25px;
+    min-width: 25px;
   }
 }
 
@@ -140,13 +141,18 @@ section {
 }
 
 .third {
-  width: 100%;
-  max-width: 16em;
-  display: inline-flex;
-  flex-direction: column;
-  &:nth-child(3n+2) {
-    padding-top: 1.5em;
+  flex: 1;
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
   }
+//   width: 100%;
+//   max-width: 16em;
+//   display: inline-flex;
+//   flex-direction: column;
+//   &:nth-child(3n+2) {
+//     padding-top: 1.5em;
+//   }
 }
 
 .primary-color {

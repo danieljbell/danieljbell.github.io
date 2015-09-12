@@ -6,6 +6,8 @@ footer {
 
 .site-footer {
   padding: 2.5em 1em;
+  display: flex;
+  flex-wrap: wrap;
   h2 {
     text-shadow: $big-shadow;
     padding-bottom: .25em;
@@ -13,6 +15,7 @@ footer {
 }
 
 .social-list-footer {
+  flex-grow: 1;
   p {
     display: inline-block;
   }

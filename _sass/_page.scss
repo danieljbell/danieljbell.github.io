@@ -13,8 +13,10 @@
   width: 70%;
   padding-right: 1em;
   margin-right: 2.5em;
-  @include bp(phone) {
+  @include bp(tablet) {
     width: 100%;
+    padding-right: 0;
+    margin-right: 0;
   }
 }
 
@@ -33,7 +35,7 @@
 }
 
 .sidebar-nav {
-  @include bp(phone) {
+  @include bp(tablet) {
     display: none;
   }
 }
@@ -111,10 +113,17 @@
 
 .button-collection {
   a {
-    margin-right: 0.5em;
+    button {
+      margin-bottom: 1em;
+      margin-right: 0.75em;
+    }
     &:last-child {
       margin-right: 0;
+      button {
+        margin-bottom: 0;
+      }
     }
+
   }
 }
 
@@ -130,10 +139,14 @@
 }
 
 .skills-row {
-  padding-bottom: 1em;
+  display: inline-flex;
+  width: 100%;
+  margin-bottom: 1em;
   &:last-child {
-    padding-bottom: 0;
-    margin-top: -1em;
+    margin-bottom: 0;
+  }
+  @include bp(phone) {
+    display: block;
   }
 }
 
@@ -150,6 +163,18 @@
       margin-right: 0;
     }
   }
+}
+
+.resume h5 {
+  display: flex;
+  flex-wrap: wrap;
+  .flexed {
+    flex-grow: 1;
+  }
+}
+
+.resume section:last-of-type {
+  padding-bottom: 0;
 }
 
 

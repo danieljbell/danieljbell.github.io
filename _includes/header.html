@@ -10,11 +10,10 @@
     <p class="site-description">{{ site.description }}</p>
   </header>
   <nav>
-    <div class="nav-menu"><span class="nav-menu-icon">{% include icons/menu.html %}</span>Menu</div>
     <div class="ul-flex">
       <ul class="max-wrap">
-        <li>
-          <a href="{{ site.baseurl }}/" class="{% if page.type == 'landing' and page.url == '/' %}active-page{% endif %}">
+        <li class="{% if page.type == 'landing' and page.url == '/' %}active-page{% endif %}">
+          <a href="{{ site.baseurl }}/" >
             <span class="nav-icon">{% include icons/home.html %}</span>
             Home
           </a>
