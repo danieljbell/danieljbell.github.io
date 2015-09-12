@@ -19,22 +19,22 @@
           </a>
         </li>
 
-        <li>
-          <a href="{{ site.baseurl }}/portfolio/" class="{% if page.type == 'landing' and page.url == '/portfolio/' %}{% assign test = true %}{% endif %}{% if page.category == 'web-digital' or page.category == 'email-marketing' or page.category == 'print-layout' %}{% assign test = true %}{% endif %}{% if test %}active-page{% endif %}">
+        <li class="{% if page.type == 'landing' and page.url == '/portfolio/' %}{% assign test = true %}{% endif %}{% if page.category == 'web-digital' or page.category == 'email-marketing' or page.category == 'print-layout' %}{% assign test = true %}{% endif %}{% if test %}active-page{% endif %}">
+          <a href="{{ site.baseurl }}/portfolio/">
             <span class="nav-icon">{% include icons/portfolio.html %}</span>
             Portfolio
           </a>
         </li>
 
-        <li>
-          <a href="{{ site.baseurl }}/resume/" class="{% if page.type == 'landing' and page.url == '/resume/' %}active-page{% endif %}">
+        <li class="{% if page.type == 'landing' and page.url == '/resume/' %}active-page{% endif %}">
+          <a href="{{ site.baseurl }}/resume/">
             <span class="nav-icon">{% include icons/resume.html %}</span>
             Resume
           </a>
         </li>
 
-        <li>
-          <a href="{{ site.baseurl }}/contact/" class="{% if page.type == 'landing' and page.url contains 'contact' %}active-page{% endif %}">
+        <li class="{% if page.type == 'landing' and page.url contains 'contact' %}active-page{% endif %}">
+          <a href="{{ site.baseurl }}/contact/">
             <span class="nav-icon">{% include icons/contact.html %}</span>
             Contact
           </a>
