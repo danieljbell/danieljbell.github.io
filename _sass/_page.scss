@@ -230,3 +230,23 @@
 .social-list p {
   padding-bottom: .5em;
 }
+
+.contact-page {
+  .primary {
+    @include bp(tablet) {
+      width: 70%;
+      padding-right: 1em;
+    }
+    @include bp(phone) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+
+.contact-sidebar {
+  text-align: left;
+  @include bp(phone) {
+    margin-top: 1em;
+  }
+}
