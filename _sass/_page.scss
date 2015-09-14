@@ -249,4 +249,7 @@
   @include bp(phone) {
     margin-top: 1em;
   }
+  svg {
+    height: 25px;
+  }
 }
