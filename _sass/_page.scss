@@ -128,13 +128,6 @@
   }
 }
 
-.dev-link {
-  @include bp(tablet) {
-    display: none;
-  }
-}
-
-
 // RESUME PAGE
 .list {
   list-style-type: disc;
