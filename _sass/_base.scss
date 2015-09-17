@@ -75,6 +75,9 @@ img {
   margin-top: .25em;
   margin-right: 5px;
   display: inline-block;
+  svg {
+    height: 25px;
+  }
 }
 
 .nav-icon {
@@ -216,6 +219,10 @@ h6 {
   @extend h2;
   padding-bottom: .2em;
   line-height: 0.9em;
+  word-wrap: break-word;
+  @include bp(phone) {
+    padding-right: 1em;
+  }
 }
 
 p {

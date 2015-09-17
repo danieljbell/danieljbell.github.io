@@ -21,7 +21,6 @@ header {
   @include bp(phone) {
     height: 10em;
     h1 {
-      padding-top: 1.5em;
       font-size: 2em;
     }
     .site-description {

@@ -25,6 +25,7 @@
   @include bp(phone) {
     width: 100%;
     text-align: center;
+    padding-top: 2em;
   }
   img {
     border-radius: 50%;
@@ -127,6 +128,12 @@
   }
 }
 
+.dev-link {
+  @include bp(tablet) {
+    display: none;
+  }
+}
+
 
 // RESUME PAGE
 .list {
@@ -175,6 +182,9 @@
 
 .resume section:last-of-type {
   padding-bottom: 0;
+  @include bp(phone) {
+    padding-bottom: 1em;
+  }
 }
 
 
@@ -246,9 +256,6 @@
 
 .contact-sidebar {
   text-align: left;
-  @include bp(phone) {
-    margin-top: 1em;
-  }
   svg {
     height: 25px;
   }
