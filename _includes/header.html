@@ -4,7 +4,7 @@
 ************************************************************************************************
 ************************************************************************************************
 
-LIKE WHAT YOU SEE?! LET'S TALK:
+LIKE WHAT I'M WORKING WITH?! LET'S TALK:
 - djbell70@gmail.com
 - http://danieljbell.github.io/contact/
 
@@ -19,7 +19,6 @@ LIKE WHAT YOU SEE?! LET'S TALK:
 Known Issues/Bugs to work through: (Hey, I'm a one man band with a full-time job and a kid. Doing all I can, when I can)
 - A bit buggy in terms of mobile browsers. Works, but has some re-painting issues.
 - IE is buggy, especially in terms of SVG + forms. But then again, it's IE. grrrrr
-- Site-wide navigation, Want to put together a more elegant mobile navigation.
 - Add in some "Pretties" with some JS.
 - Async page loading in the portfolio section.
 
@@ -40,6 +39,7 @@ Known Issues/Bugs to work through: (Hey, I'm a one man band with a full-time job
     <p class="site-description">{{ site.description }}</p>
   </header>
   <nav>
+    <div class="nav-toggle"><span class="menu-icon">{% include icons/menu.html %}</span>Menu</div>
     <div class="ul-flex">
       <ul class="max-wrap">
         <li class="{% if page.type == 'landing' and page.url == '/' %}active-page{% endif %}">

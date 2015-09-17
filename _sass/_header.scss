@@ -7,24 +7,31 @@ header {
   flex-direction: column;
   justify-content: center;
   text-shadow: $big-shadow;
+  .site-description {
+    color: #fff;
+    padding-top: 1em;
+    font-size: 1.222em;
+    @include bp(phone) {
+      padding-top: 0.25em;
+    }
+  }
   @include bp(laptop) {
     height: 22.222em;
   }
   @include bp(phone) {
-    height: 16.667em;
+    height: 10em;
+    h1 {
+      padding-top: 1.5em;
+      font-size: 2em;
+    }
+    .site-description {
+      font-size: 1em;
+      line-height: 1em;
+    }
   }
   a {
     color: #fff;
   }
-}
-
-.site-description {
-  color: #fff;
-}
-
-.site-description {
-  padding-top: 1em;
-  font-size: 1.222em;
 }
 
 nav {
@@ -32,12 +39,39 @@ nav {
   background: linear-gradient($dark, $darken-dark);
   text-align: center;
   height: 3.889em;
+  line-height: 3.889em;
+  color: #fff;
+  text-transform: uppercase;
   @include bp(phone) {
     height: auto;
   }
 
+  .nav-toggle {
+    display: none;
+    height: 3.889em;
+    line-height: 3.889em;
+    color: #fff;
+    @include bp(phone) {
+      display: block;
+    }
+    .menu-icon svg {
+      width: 100%;
+      max-width: 25px;
+      margin-right: 10px;
+    }
+  }
+
+  .nav-open {
+    @include bp(phone) {
+      display: block !important;
+    }
+  }
+
   .ul-flex {
     display: block;
+    @include bp(phone) {
+      display: none;
+    }
   }
 
   ul {
@@ -45,16 +79,16 @@ nav {
     margin: 0 auto;
     @include bp(phone) {
       display: flex;
+      width: 100%;
       flex-direction: column;
     }
     li {
       display: inline-block;
       flex: 1;
-      text-align: center;
-      height: 3.889em;
-      line-height: 3.889em;
-      color: #fff;
-      text-transform: uppercase;
+      @include bp(phone) {
+        display: block;
+        width: 100%;
+      }
       transition: background-color 200ms ease-in-out;
       &:hover {
         background-color: $lighten-dark;
