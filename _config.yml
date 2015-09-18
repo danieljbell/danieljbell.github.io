@@ -13,5 +13,6 @@ codepen_username:  djbell
 markdown: kramdown
 sass:
   style: :compressed
+  sass_dir: _sass
 exclude: ['Gruntfile.js', 'package.json', 'node_modules']
 permalink: pretty
