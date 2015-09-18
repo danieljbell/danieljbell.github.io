@@ -6,6 +6,7 @@ layout: default
 <div class="iframe-container">
   <iframe src="http://danieljbell.github.io/BDapp/departments/TOC" frameborder="0"></iframe>
 </div>
+<button>Rotate the phone</button>
 
 <style>
   * {
@@ -19,15 +20,18 @@ layout: default
   .iframe-container {
     width: 100%;
     max-width: 375px;
-    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
     position: absolute;
     left: calc(50% - 186px);
     top: 130px;
+    transition: all 400ms ease-in-out;
   }
   iframe {
     width: 100%;
     height: 605px;
     overflow: auto;
+    transition: all 400ms ease-in-out;
   }
   iframe::-webkit-scrollbar {
       display: none;
@@ -37,12 +41,23 @@ layout: default
     max-width: 440px;
     position: absolute;
     left: calc(50% - 220px);
+    transition: transform 400ms ease-in-out;
   }
+  .rotate {
+    transform: rotate(90deg);
+  }
+
+
   @media (max-width: 1300px) {
     .iframe-container {
       max-width: 16em;
       left: calc(50% - 125px);
       top: 125px;
+    }
+    .iframe-container-rotated {
+      max-width: 25em;
+      left: calc(50% - 200px);
+      top: 206px;
     }
     .iPhone {
       max-width: 335px;
@@ -51,9 +66,12 @@ layout: default
     iframe {
       height: 24.5em;
     }
+    .iframe-rotated {
+      height: 16em;
+    }
   }
   @media (max-width: 568px) {
-    .iPhone {
+    .iPhone, button {
       display: none;
     }
     .iframe-container {
@@ -68,4 +86,22 @@ layout: default
       height: 100%;
     }
   }
+  @media (max-width: 321px) {
+    .iframe-container {
+      max-width: 320px;
+    }
+    iframe {
+      width: 320px;
+    }
+  }
 </style>
+<script src="{{ site.baseurl }}/js/jquery.js"></script>
+<script>
+  $(function() {
+    $('button').on('click', function() {
+      $('.iPhone').toggleClass('rotate');
+      $('.iframe-container').toggleClass('iframe-container-rotated');
+      $('iframe').toggleClass('iframe-rotated');
+    });
+  });
+</script>
