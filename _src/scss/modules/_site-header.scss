@@ -1,0 +1,12 @@
+.site-header {
+  position: relative;
+}
+
+.site-header-content {
+  background-color: green;
+  @include bp(md) {
+    position: fixed;
+    min-height: 100vh;
+    width: $header-width;
+  }
+}

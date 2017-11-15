@@ -6,16 +6,21 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{page.title}}</title>
+  <link rel="stylesheet" href="{{site.baseurl}}/dist/css/main.css">
 </head>
 <body>
   <header class="site-header">
-    stuff
+    <div class="site-header-content">
+      site-header
+    </div>
   </header>
-  <main>
-    {{content}}
-  </main>
-  <footer class="site-footer">
-    
-  </footer>
+  <div class="content-wrap">
+    <main style="height: 3000px;">
+      {{content}}
+    </main>
+    <footer class="site-footer">
+      site-footer
+    </footer>
+  </div>
 </body>
 </html>
