@@ -11,17 +11,17 @@ body {
 
 .content-wrap {
   padding: 1rem;
-  background-color: blue;
-  @include bp(sm) {
-    background-color: yellow;
-  }
-  @include bp(md) {
-    padding: 3rem;
-  }
-  @include bp(lg) {
-    background-color: orange;
-  }
-  @include bp(xl) {
-    background-color: red;
-  }
+  // background-color: blue;
+  // @include bp(sm) {
+  //   background-color: yellow;
+  // }
+  // @include bp(md) {
+  //   padding: 3rem;
+  // }
+  // @include bp(lg) {
+  //   background-color: orange;
+  // }
+  // @include bp(xl) {
+  //   background-color: red;
+  // }
 }

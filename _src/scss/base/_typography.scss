@@ -1,5 +1,59 @@
 html,
 body {
-  font-size: 18px;
+  font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+  font-size: 20px;
   line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 1rem;
+  
+  li {
+    position: relative;
+    margin-bottom: 1rem;
+
+    &:before {
+      content: url('//fillmurray.com/10/10');
+      position: absolute;
+      top: 0;
+      left: -1rem;
+    }
+
+  }
+
 }

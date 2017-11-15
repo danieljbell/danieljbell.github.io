@@ -63,8 +63,21 @@ gulp.task('css', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(gulp.dest('_site/dist/css'))
+    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./_site/dist/css'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('js', function () {
+  gulp.src([
+    '_src/js/main.js'
+  ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./_site/dist/js'))
     .pipe(browserSync.stream());
 });
 
@@ -74,11 +87,12 @@ gulp.task('css', function () {
  */
 gulp.task('watch', function () {
   gulp.watch(['_src/scss/*.scss','_src/scss/**/*.scss'], ['clean', 'css']);
-  gulp.watch(['index.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch(['_src/js/*.js','_src/js/**/*.js'], ['clean', 'js']);
+  gulp.watch(['index.html', '_layouts/*.html', '_posts/**/*'], ['jekyll-rebuild']);
 });
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['css', 'watch', 'browser-sync']);
+gulp.task('default', ['css', 'js', 'watch', 'browser-sync']);

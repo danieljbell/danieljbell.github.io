@@ -3,7 +3,7 @@
 }
 
 .site-header-content {
-  background-color: green;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   @include bp(md) {
     position: fixed;
     min-height: 100vh;
