@@ -1,0 +1,43 @@
+.home .hero {
+  min-height: 100vh;
+  
+  .me {
+    background-image: url(../img/me.jpg);
+    min-height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+    width: calc(100% + 2rem);
+    @include bp(md) {
+      position: fixed;
+      z-index: -1;
+      left: $header-width;
+      top: 0;
+      bottom: 0;
+      width: calc(100% - #{$header-width});
+    }
+  }
+
+  .content {
+    @include bp(md) {
+      position: absolute;
+      top: calc(50% - 3rem);
+      transform: translateY(-50%);
+      max-width: 50vw;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+
+}
+

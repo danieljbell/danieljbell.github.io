@@ -5,15 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{page.title}}</title>
+  <title>{{site.title}} | {{page.title}}</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
   <link rel="stylesheet" href="{{site.baseurl}}/dist/css/main.css">
 </head>
-<body>
+{% include body-class.html %}
   <header class="site-header">
     <div class="site-header-content">
-      site-header
+      <div class="site-name">Daniel Bell</div>
     </div>
+    <button class="menu-toggle" type="button"><span>&rarr;</span></button>  
   </header>
   <div class="content-wrap">
     <main style="height: 3000px;">

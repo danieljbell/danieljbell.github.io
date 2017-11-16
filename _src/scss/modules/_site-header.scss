@@ -1,12 +1,88 @@
 .site-header {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  @include bp(md) {
+    position: initial;
+  }
 }
 
 .site-header-content {
-  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(-125deg, #89f7fe 20%, #66a6ff);
+  // padding: 1rem;
+  max-height: 75px;
+  overflow: hidden;
   @include bp(md) {
+    padding: 0;
     position: fixed;
     min-height: 100vh;
-    width: $header-width;
+    width: 100%;
+    max-width: $header-width;
+    transition: max-width 300ms ease-in-out;
+  }
+
+  .menu-open & {
+    max-width: calc(#{$header-width} + 20rem);
+  }
+}
+
+.site-name {
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: rgba(white, 0.65);
+  line-height: 1.1;
+  font-weight: bold;
+  font-size: 22vw;
+  @include bp(md) {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 22vh;
+  }
+}
+
+.menu-toggle {
+  border: 0;
+  font-size: 1.75rem;
+  color: #fff;
+  position: fixed;
+  top: 1rem;
+  left: $header-width;
+  background-color: #89f7fe;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  max-width: 2.5rem;
+  &:before {
+    position: absolute;
+    content: 'Menu';
+    font-size: 1rem;
+    transform: translateX(calc(-100% - 1rem));
+  }
+  &:hover,
+  &:active {
+    max-width: 4rem;
+  }
+  &:hover:before,
+  &:active:before {
+    transform: translateX(0);
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  span {
+    display: inline-block;
+    transition: transform 300ms ease-in-out;
+    .menu-open & {
+      transform: rotate(180deg);
+    }
+  }
+
+  .menu-open & {
+    transform: translateX(calc(#{$header-width} + 12.5rem));
   }
 }
