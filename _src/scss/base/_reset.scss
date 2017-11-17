@@ -3,6 +3,9 @@
 }
 
 body {
+  background-color: #f0f0f0;
+  background-image: url(../img/geometry.png);
+  background-blend-mode: multiply;
   display: grid;
   @include bp(md) {
     grid-template-columns: $header-width 1fr;
@@ -11,7 +14,21 @@ body {
 
 .content-wrap {
   padding: 1rem;
+  position: relative;
   @include bp(md) {
     padding: 3rem;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f0f0f0;
+    z-index: -1;
+    opacity: 0.65;
+    filter: blur(125px);
   }
 }
