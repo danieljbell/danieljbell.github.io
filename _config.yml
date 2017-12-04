@@ -2,7 +2,7 @@
 title: Daniel Bell
 email: djbell70@gmail.com
 description: Web Design + Development
-baseurl: "http://localhost:3000" 
+baseurl: "/" 
 url: "http://danieljbell.github.io" 
 twitter_username: DeveloperDB
 github_username:  danieljbell

@@ -27,7 +27,7 @@
       position: absolute;
       top: calc(50% - 3rem);
       transform: translateY(-50%);
-      max-width: 50vw;
+      max-width: 45vw;
     }
   }
 
@@ -36,8 +36,18 @@
   }
 
   h2 {
+    font-size: 3rem;
     font-weight: normal;
   }
 
 }
 
+.home .about {
+  @include bp(md) {
+    font-size: 1.2rem;
+    // margin-top: -3rem;
+    max-width: 40vw;
+    // padding-bottom: 2rem;
+    // margin-bottom: 2rem;
+  } 
+}

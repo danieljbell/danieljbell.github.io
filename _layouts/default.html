@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{site.title}} | {{page.title}}</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="{{site.baseurl}}/dist/css/main.css">
+  <link rel="stylesheet" href="{{site.baseurl}}dist/css/main.css">
 </head>
 {% include body-class.html %}
   <header class="site-header">
@@ -16,6 +16,7 @@
       <div class="menu-container">
         <nav>
           <ul>
+            <li><a href="/">Home</a></li>
             <li><a href="#0">About</a></li>
             <li><a href="#0">Work</a></li>
             <li><a href="/blog">Blog</a></li>
@@ -32,13 +33,13 @@
     <button class="menu-toggle" type="button"><span>&rarr;</span></button>  
   </header>
   <div class="content-wrap">
-    <main style="height: 3000px;">
+    <main>
       {{content}}
     </main>
     <footer class="site-footer">
       site-footer
     </footer>
   </div>
-  <script type='text/javascript' src='{{site.baseurl}}/dist/js/main.js'></script>
+  <script type='text/javascript' src='{{site.baseurl}}dist/js/main.js'></script>
 </body>
 </html>
