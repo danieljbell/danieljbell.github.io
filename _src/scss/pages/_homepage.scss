@@ -45,9 +45,51 @@
 .home .about {
   @include bp(md) {
     font-size: 1.2rem;
-    // margin-top: -3rem;
     max-width: 40vw;
-    // padding-bottom: 2rem;
-    // margin-bottom: 2rem;
   } 
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.home .work {
+  padding-top: 4rem;
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+
+    li {
+      border: 1px solid red;
+      margin: 0;
+      padding: 3rem;
+      background-size: cover;
+      background-position: center;
+      &:before {
+        display: none;
+      }
+    }
+
+  }
+
+  .work--octiv {
+    background-image: url('../img/octiv-bg.png');
+  }
+
+  .work--finxtech {
+    background-image: url('../img/finxtech-bg.png');
+  }
+
+  .work--bankdirector {
+    background-image: url('../img/bankdirector-bg.png');
+  }
+
+  .work--brandon-riley {
+    background-image: url('../img/brandonriley-bg.png');
+  }
+
 }

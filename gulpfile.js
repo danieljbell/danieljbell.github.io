@@ -115,7 +115,7 @@ gulp.task('images', function() {
 gulp.task('watch', function () {
   gulp.watch(['_src/scss/*.scss','_src/scss/**/*.scss'], ['clean:css', 'css']);
   gulp.watch(['_src/js/*.js','_src/js/**/*.js'], ['clean:js', 'js']);
-  gulp.watch(['index.html', '_layouts/*.html', '_posts/**/*', '_includes/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['index.html', '_layouts/*.html', '_posts/**/*', '_includes/**/*', '_work/**/*'], ['jekyll-rebuild']);
   gulp.watch(['_src/img/*'], ['clean:img', 'images']);
 });
 
@@ -123,4 +123,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['css', 'images', 'js', 'watch', 'browser-sync']);
+gulp.task('default', ['css', 'js', 'watch', 'browser-sync']);

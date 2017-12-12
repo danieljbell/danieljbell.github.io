@@ -1,8 +1,6 @@
 (function() {
   var baseFontSize = window.getComputedStyle(document.body).getPropertyValue("font-size");
 
-  console.log(baseFontSize);
-
   if (document.body.classList.contains('home')) {
     var me = document.querySelector('.me');
 
@@ -11,8 +9,10 @@
     function meMoving() {
       var scrollPos = this.scrollY;
       var aboutContainer = document.querySelector('.about');
+      var workContainer = document.querySelector('.work');
       if (scrollPos > (aboutContainer.nextElementSibling.offsetTop - aboutContainer.offsetHeight)) {
-        console.log('get moving');
+        var offset = (aboutContainer.nextElementSibling.offsetTop - aboutContainer.offsetHeight) - scrollPos;
+        me.style.transform = 'translateY(' + offset + 'px)';
       }
     }
 

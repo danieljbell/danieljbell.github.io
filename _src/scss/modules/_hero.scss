@@ -1,3 +1,11 @@
 .hero {
   position: relative;
+
+  .hero-image {
+    position: relative;
+    left: -3rem;
+    top: -3rem;
+    width: calc(100% + 6rem);
+  }
+
 }
