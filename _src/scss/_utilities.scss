@@ -8,5 +8,9 @@
   padding: 0;
   position: absolute;
   width: 1px;
-  white-space: nowrap; /* 1 */
+  white-space: nowrap;
+}
+
+.has-text-center {
+  text-align: center;
 }

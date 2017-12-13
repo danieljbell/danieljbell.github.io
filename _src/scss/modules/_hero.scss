@@ -1,11 +1,73 @@
 .hero {
   position: relative;
+}
 
-  .hero-image {
-    position: relative;
+body:not(.home) .hero {
+  position: relative;
+  z-index: 0;
+  left: -1rem;
+  top: -2rem;
+  width: calc(100% + 2rem);
+  background-size: cover;
+  background-position: center;
+  @include bp(md) {
     left: -3rem;
     top: -3rem;
     width: calc(100% + 6rem);
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  .contents {
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-logo {
+    width: 100%;
+    max-width: 400px;
+    filter: drop-shadow(3px 3px 2px rgba(black, 0.5));
+    margin-bottom: 2rem;
+  }
+
+  .role-container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+
+    li {
+      margin-right: 3rem;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      &:before {
+        display: none;
+      }
+
+    }
+
+    img {
+      filter: grayscale(1) invert(300%);
+    }
+
   }
 
 }

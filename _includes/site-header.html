@@ -1,0 +1,14 @@
+<div class="site-header-content">
+  <div class="site-name"><a href="/">Daniel Bell</a></div>
+  <div class="menu-container">
+    <nav>
+      <ul>
+        {% for item in site.data.navigation.header %}
+          <li><a href="{{item.url}}" title="{{item.title}}">{{item.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <p>Made with Jekyll, Sass, Gulp. <a href="http://github.com/{{site.github_username}}">View source</a></p>
+  </div>
+</div>
+<button class="menu-toggle" type="button"><span>&rarr;</span></button>  

@@ -1,9 +1,22 @@
 ---
 layout: default
 ---
-<section class="hero">
-  <img src="{{page.hero_image}}" alt="{{page.title}}" class="hero-image">
-  stuff
+<section class="hero" style="background-image: url({{page.hero_image}});">
+  <h1 class="visually-hidden">{{page.title}}</h1>
+  <div class="contents">
+    <img src="{{page.logo}}" alt="{{page.title}} Logo" class="hero-logo">
+    <ul class="role-container">
+      {% for role in page.role %}
+        {% if role == 'Designer' %}
+          {% assign icon = '/dist/img/design.svg' %}
+        {% else if %}
+          {% assign icon = '/dist/img/code.svg' %}
+        {% endif %}
+        <li><img src="{{icon}}" alt="">{{role}}</li>
+      {% endfor %}
+    </ul>
+  </div>
 </section>
-
-{{content}}
+<div class="article-content">
+  {{content}}
+</div>

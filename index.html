@@ -2,41 +2,43 @@
 layout: default
 title: Home
 ---
-<section class="hero">
+
+<section class="hero" id="hero">
   <div class="me"></div>
   <div class="content">
     <h1>Hey There!</h1>
     <h2>My Name is Daniel + I design + develop websites!</h2>
   </div>
 </section>
-<section class="about">
+
+<section class="about" id="about">
   <h3>About Me</h3>
   <p>I’m a wannabe rock guitar prodigy morphed into a designer + developer aspiring to help build a better web using the latest + greatest tools + techniques of a modern day front-end developer. The internet has become an invaluable tool that has exponentially changed the possibility of doing just about anything. I want to be a part of pushing the boundaries on what is possible, but never forgetting one key point... performance. Because after all, no one uses a slow website! :)</p>
   <p>When I’m not pecking away on the keyboard, I’m probably shredding guitar like a mad man, doing something outside like canoeing, hanging out with the "fam" or some sort of combination of all the above.</p>
   <p>Take a look at some of my work and let me know what you think. You can reach me on social media or shoot me a quick email at djbell70@gmail.com (no I didn’t used to be a DJ, it’s just my initials). Have a good one!</p>
 </section>
-<section class="work">
-  <h3>Work</h3>
+
+<section class="work" id="work">
+  <h3 class="has-text-center">Work</h3>
   <ul class="work-grid">
-    <li class="work--costello">
-      <span class="visually-hidden">Costello</span>
-      <a href="#0"><img src="//fillmurray.com/100/100" alt=""></a>
-    </li>
-    <li class="work--octiv">
-      <span class="visually-hidden">Octiv</span>
-      <a href="#0"><img src="/dist/img/Octiv-Logo-Color.svg" alt=""></a>
-    </li>
-    <li class="work--finxtech">
-      <span class="visually-hidden">FinXTech</span>
-      <a href="#0"><img src="/dist/img/finxtech.svg" alt=""></a>
-    </li>
-    <li class="work--bankdirector">
-      <span class="visually-hidden">Bank Director</span>
-      <a href="#0"><img src="/dist/img/BD.svg" alt=""></a>
-    </li>
-    <li class="work--brandon-riley">
-      <span class="visually-hidden">Brandon Riley</span>
-      <a href="#0"><img src="/dist/img/BR.svg" alt=""></a>
-    </li>
+    {% for item in site.work %}
+      <li style="background-image: url({{item.hero_image}});">
+        <span class="visually-hidden">{{item.title}}</span>
+        <a href="{{item.url}}"><img src="{{item.logo}}" alt="{{item.title}}"></a>
+      </li>
+    {% endfor %}
   </ul>
+</section>
+
+<section class="blog" id="blog">
+  <h3 class="has-text-center">Blog</h3>
+  <ul class="blog-grid">
+    {% for item in site.posts %}
+      <li><a href="{{item.url}}">{{item.title}}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="contact" id="contact">
+  <h3 class="has-text-center">Contact</h3>
 </section>

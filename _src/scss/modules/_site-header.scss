@@ -48,7 +48,6 @@
 .site-name {
   white-space: nowrap;
   text-transform: uppercase;
-  color: rgba(white, 0.65);
   line-height: 1.1;
   font-weight: bold;
   font-size: 22vw;
@@ -56,6 +55,10 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-size: 22vh;
+  }
+  a {
+    color: rgba(white, 0.65);
+    text-decoration: none;
   }
 }
 

@@ -1,0 +1,11 @@
+header:
+  - title: Home
+    url: /#hero
+  - title: About
+    url: /#about
+  - title: Work
+    url: /#work  
+  - title: Blog
+    url: /#blog
+  - title: Contact
+    url: /#contact

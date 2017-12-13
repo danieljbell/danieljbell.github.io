@@ -11,29 +11,14 @@
 </head>
 {% include body-class.html %}
   <header class="site-header">
-    <div class="site-header-content">
-      <div class="site-name">Daniel Bell</div>
-      <div class="menu-container">
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#0">About</a></li>
-            <li><a href="#0">Work</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="#0">Contact</a></li>
-          </ul>
-        </nav>
-        <p>Made with Jekyll, Sass, Gulp. <a href="http://github.com/{{site.github_username}}">View source</a></p>
-      </div>
-    </div>
-    <button class="menu-toggle" type="button"><span>&rarr;</span></button>  
+    {% include site-header.html %}
   </header>
   <div class="content-wrap">
     <main>
       {{content}}
     </main>
     <footer class="site-footer">
-      site-footer
+      {% include site-footer.html %}
     </footer>
   </div>
   <script type='text/javascript' src='{{site.baseurl}}dist/js/main.js'></script>
