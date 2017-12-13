@@ -1,5 +1,6 @@
 ---
 layout: work
+order: 1
 title: Brandon Riley
 hero_image: /dist/img/brandonriley-bg.png
 logo: /dist/img/BR.svg

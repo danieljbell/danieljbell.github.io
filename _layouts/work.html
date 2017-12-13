@@ -12,11 +12,22 @@ layout: default
         {% else if %}
           {% assign icon = '/dist/img/code.svg' %}
         {% endif %}
-        <li><img src="{{icon}}" alt="">{{role}}</li>
+        <li class="role-item">
+          <div class="role-icon">
+            <img src="{{icon}}" alt="{{role}} icon">
+          </div>
+          <div class="role-content">
+            {{role}}
+          </div>
+        </li>
       {% endfor %}
     </ul>
   </div>
 </section>
 <div class="article-content">
+  <section class="about-company" id="about">
+    <h3>About {{page.title}}</h3>
+    <p>{{page.company_description}}</p>
+  </section>
   {{content}}
 </div>

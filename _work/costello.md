@@ -1,5 +1,6 @@
 ---
 layout: work
+order: 1
 title: Costello
 hero_image: //unsplash.it/1280/500
 logo: /dist/img/costello.svg

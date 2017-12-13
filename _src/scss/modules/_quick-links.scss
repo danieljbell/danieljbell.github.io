@@ -1,0 +1,37 @@
+.quick-links {
+  position: relative;
+  top: -3rem;
+  transform: translate(-3rem, 0);
+  width: calc(100% + 6rem);
+  background-color: #fff;
+
+  li {
+    padding: 0;
+    margin: 0;
+    &:before {
+      display: none;
+    }
+  }
+
+  .quick-links-list {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #555;
+  }
+
+}
+
+.quick-links-fixed .quick-links {
+  position: fixed;
+  top: 0;
+  left: calc(150px + 3rem);
+  right: 0;
+  width: calc(100% - 150px);
+}

@@ -1,5 +1,6 @@
 ---
 layout: work
+order: 10
 title: Octiv
 hero_image: /dist/img/octiv-bg.png
 logo: /dist/img/Octiv-Logo-Color.svg
