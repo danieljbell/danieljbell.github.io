@@ -1,6 +1,6 @@
 ---
 layout: work
-order: 1
+order: 2
 title: FinXTech
 hero_image: /dist/img/finxtech-bg.png
 logo: /dist/img/finxtech.svg

@@ -4,6 +4,8 @@
   if (document.body.classList.contains('home')) {
     var me = document.querySelector('.me');
 
+    meMoving();
+
     window.addEventListener('scroll', meMoving);
 
     function meMoving() {

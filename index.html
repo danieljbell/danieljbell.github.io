@@ -22,7 +22,7 @@ title: Home
   <h3 class="has-text-center">Work</h3>
   <ul class="work-grid">
     {% assign all_work = site.work | sort: 'order' %}
-    {% for item in all_work %}
+    {% for item in all_work reversed %}
       <li style="background-image: url({{item.hero_image}});">
         <span class="visually-hidden">{{item.title}}</span>
         <a href="{{item.url}}"><img src="{{item.logo}}" alt="{{item.title}}"></a>
