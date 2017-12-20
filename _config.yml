@@ -17,5 +17,5 @@ collections:
   posts:
     permalink: /blog/:categories/:title/
   work:
-    permalink: /work/:title/
+    permalink: /work/:categories/:slug/
     output: true

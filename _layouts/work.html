@@ -29,5 +29,12 @@ layout: default
     <h3>About {{page.title}}</h3>
     <p>{{page.company_description}}</p>
   </section>
+  {% for item in site.work %}
+    {% if item.category == page.category %}
+      {% unless item.url == page.url %}
+        <li><a href="{{item.url}}" title="{{item.title}}">{{item.title}}</a></li>
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
   {{content}}
 </div>
