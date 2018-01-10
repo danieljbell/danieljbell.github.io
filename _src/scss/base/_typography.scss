@@ -25,6 +25,28 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5em;
+  &:before,
+  &:after {
+    content: '';
+    border-top: 0.2em double transparent;
+    border-image: linear-gradient(-135deg, #89f7fe 20%, #66a6ff);
+    border-image-slice: 1;
+    position: relative;
+    width: 1.5em;
+    display: inline-block;
+    position: relative;
+    transform: translateY(-0.2em);
+  }
+  &:before {
+    right: 0.5em;
+  }
+  &:after {
+    left: 0.5em;
+  }
 }
 
 h4 {
@@ -37,6 +59,7 @@ h5 {
 
 h6 {
   font-size: 1rem;
+  line-height: 1.1;
 }
 
 p {

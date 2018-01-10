@@ -1,7 +1,11 @@
 {% if page.url == '/' %}
 <body class="home">
 {% elsif page.path contains '_work' %}
-<body class="work">
+  {% if page.url == '/work/' %}
+    <body class="archive-work">
+  {% else %}
+    <body class="single-work">
+  {% endif %}
 {% else %}
 <body>
 {% endif %}

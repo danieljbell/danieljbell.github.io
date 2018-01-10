@@ -23,10 +23,12 @@ title: Home
   <ul class="work-grid">
     {% assign all_work = site.work | sort: 'order' %}
     {% for item in all_work reversed %}
-      <li style="background-image: url({{item.hero_image}});">
-        <span class="visually-hidden">{{item.title}}</span>
-        <a href="{{item.url}}"><img src="{{item.logo}}" alt="{{item.title}}"></a>
-      </li>
+      {% if item.is_category %}
+        <li style="background-image: url({{item.hero_image}});">
+          <span class="visually-hidden">{{item.title}}</span>
+          <a href="{{item.url}}"><img src="{{item.logo}}" alt="{{item.title}}"></a>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </section>

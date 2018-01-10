@@ -1,0 +1,13 @@
+.company-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    &:before {
+      display: none;
+    }
+  }
+}

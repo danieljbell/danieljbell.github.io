@@ -29,12 +29,26 @@ layout: default
     <h3>About {{page.title}}</h3>
     <p>{{page.company_description}}</p>
   </section>
-  {% for item in site.work %}
-    {% if item.category == page.category %}
-      {% unless item.url == page.url %}
-        <li><a href="{{item.url}}" title="{{item.title}}">{{item.title}}</a></li>
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
-  {{content}}
+  <section class="company-projects">
+    <h3>{{page.title}} Projects</h3>
+    <ul class="company-project-grid">
+      {% for item in site.work %}
+        {% if item.category == page.category %}
+          {% unless item.url == page.url %}
+            <li class="card">
+              <div class="card-image">
+                <a href="{{item.url}}" title="{{item.title}}"><img src="{{item.thumbnail_image}}" alt=""></a>
+              </div>
+              <div class="card-content">
+                <h6><a href="{{item.url}}" title="{{item.title}}">{{item.title}}</a></h6>
+              </div>
+            </li>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  <section>
+    {{content}}
+  </section>
 </div>

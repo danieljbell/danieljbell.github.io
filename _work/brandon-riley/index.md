@@ -1,6 +1,8 @@
 ---
 layout: work
+is_category: true
 order: 0
+permalink: /work/brandon-riley/
 title: Brandon Riley
 hero_image: /dist/img/brandonriley-bg.png
 logo: /dist/img/BR.svg

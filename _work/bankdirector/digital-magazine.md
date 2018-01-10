@@ -4,6 +4,7 @@ order: 1
 title: Bank Director Digital Magazine
 category: bankdirector
 hero_image: /dist/img/bankdirector-bg.png
+thumbnail_image: /dist/img/bd-digital-magazine-tb.png
 logo: /dist/img/BD.svg
 role:
     - Designer

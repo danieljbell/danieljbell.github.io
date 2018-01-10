@@ -1,5 +1,6 @@
 ---
 layout: work
+is_category: true
 order: 3
 title: Octiv
 hero_image: /dist/img/octiv-bg.png
